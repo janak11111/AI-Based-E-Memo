@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.addons.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/jquery.toast.min.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../static/adminResources/images/logo_icon.png"/>
+</head>
+
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+
+    {% include 'admin/header.html' %}
+
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+        <!-- partial:partials/_sidebar.html -->
+
+
+        {% include 'admin/menu.html' %}
+
+
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"><b>Add User</b></h4>
+                                <form class="cmxform" method="post" action="/admin/insert_user"
+                                      onsubmit="return addUser()">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label for="Traffic Plice Station Name">Traffic Police Station Name</label>
+                                            <input id="trafficpolicestationname" class="form-control"
+                                                   name="trafficPolicestationName" type="text"
+                                                   onkeypress='return event.charCode>=65 && event.charCode<=90 || event.charCode>=97 && event.charCode<=122'>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="areaName">Area Name</label>
+
+                                            <select class="form-control" id="areaname"
+                                                    name="trafficPolicestationAreaId">
+
+                                                <option selected>Select Area</option>
+
+                                                {% for row in area_vo_list %}
+
+                                                    <option value="{{ row['area_id'] }}">{{ row['area_name'] }}</option>
+
+                                                {% endfor %}
+
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="Traffic Police Head Name">Traffic Police Head Name</label>
+                                            <input id="trafficpoliceheadname" class="form-control"
+                                                   name="trafficPoliceHeadName" type="text"
+                                                   onkeypress='return event.charCode>=65 && event.charCode<=90 || event.charCode>=97 && event.charCode<=122'>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Traffic Police Head Contact">Traffic Police Head Contact</label>
+                                            <input id="trafficpoliceheadcontact" class="form-control"
+                                                   name="trafficPoliceHeadContact" type="text"
+                                                   onkeypress='return event.charCode>=48 && event.charCode<=57'>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Traffic Police Head Username">Traffic Police Head
+                                                Username</label>
+                                            <input id="username" class="form-control"
+                                                   name="trafficPoliceHeadUsername" type="text">
+                                        </div>
+
+                                        <input class="btn btn-primary" type="submit" value="Submit">
+                                    </fieldset>
+                                </form>
+                                <br>
+
+                                {% with message = get_flashed_messages() %}
+
+                                    {% if message %}
+
+                                        <div style="color: red; font-size: 15px;">
+                                            {{ message[0] }}</div>
+
+                                    {% endif %}
+
+                                {% endwith %}
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+
+            {% include 'admin/footer.html' %}
+
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="../../static/adminResources/js/vendor.bundle.base.js"></script>
+<script src="../../static/adminResources/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../static/adminResources/js/off-canvas.js"></script>
+<script src="../../static/adminResources/js/hoverable-collapse.js"></script>
+<script src="../../static/adminResources/js/template.js"></script>
+<script src="../../static/adminResources/js/settings.js"></script>
+<script src="../../static/adminResources/js/todolist.js"></script>
+<script src="../../static/adminResources/js/jquery.toast.min.js"></script>
+<script src="../../static/adminResources/js/toaster.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../static/adminResources/js/form-validation.js"></script>
+<script src="../../static/adminResources/js/bt-maxLength.js"></script>
+
+<!-- End custom js for this page-->
+<script src="../../static/adminResources/js/customvalidation.js"></script>
+</body>
+
+</html>
+
+
+</body>
+</html>

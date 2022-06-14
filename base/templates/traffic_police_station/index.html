@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/w3-theme-black.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/w3.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../static/adminResources/images/logo_icon.png"/>
+    <style>
+        .header {
+            padding: 60px;
+            text-align: center;
+            background-image: url('../../static/adminResources/images/about_us.jpg') !important;
+            color: #FB9337;
+            font-size: 30px;
+        }
+
+        .bg-gray-200 {
+            height: 250px;
+            text-align: center;
+        }
+
+        .fo {
+            font-size: 1.5em;
+        }
+
+        .card-text {
+            padding: 0px 22px;
+            margin-top: 0.5em;
+        }
+
+        .io {
+            font-size: 3.5rem;
+            margin-bottom: 0.5em;
+            color: #FB9337;
+        }
+
+        #card:hover {
+            box-shadow: 0px 0px 20px 0px black;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+
+    {% include 'traffic_police_station/header.html' %}
+
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+        <!-- partial:partials/_sidebar.html -->
+
+
+        {% include 'traffic_police_station/menu.html' %}
+
+
+        <!-- partial -->
+        <div class="am-mainpanel">
+            <!-- am-pagetitle -->
+            <div class="am-pagebody" style="padding-right: 0;padding-left: 0;">
+
+                <!-- About Section -->
+                <div class="w3-row w3-padding-64" id="about">
+                    <div class="w3-col m6 w3-padding-large">
+                        <h1 class="w3-center">About AI Based E-Memo</h1><br>
+                        <p class="w3-large w3-text-grey w3-hide-medium" style="text-align: justify;">AI Based E-Memo is Useful to all Traffic polices
+                            in order to reduce their Paper work
+                            to making manual Memos. In our project traffic police Scan the Face of Person Who
+                            Breaks the Traffic Laws and Gets that person's details from RTO database in his
+                            device. After that, traffic police verify required documents of person. Then after
+                            based on missing required documents, Traffic police generates E-Memo and send
+                            to the person's registered Email address or mobile number.</p>
+                    </div>
+                    <div class="w3-col m6 w3-padding-large w3-hide-small">
+                        <img src="../../static/adminResources/images/about_us.jpg" class="w3-round w3-image w3-opacity-min"
+                             alt="Table Setting" width="600" height="750">
+                    </div>
+                </div>
+
+            </div>
+            {% include 'traffic_police_station/footer.html' %}
+        </div>
+    </div>
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="../../static/adminResources/js/vendor.bundle.base.js"></script>
+<script src="../../static/adminResources/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../static/adminResources/js/off-canvas.js"></script>
+<script src="../../static/adminResources/js/hoverable-collapse.js"></script>
+<script src="../../static/adminResources/js/template.js"></script>
+<script src="../../static/adminResources/js/settings.js"></script>
+<script src="../../static/adminResources/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../static/adminResources/js/form-validation.js"></script>
+<script src="../../static/adminResources/js/bt-maxLength.js"></script>
+<!-- End custom js for this page-->
+</body>
+
+</html>
+
